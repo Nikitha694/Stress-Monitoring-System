@@ -22,7 +22,6 @@ An AI-powered Stress Monitoring & Assistance System that predicts a user's stres
 ### Frontend
 - React.js
 - Vite
-- TypeScript
 - Tailwind CSS
 - Axios
 - React Router
