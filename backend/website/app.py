@@ -2,13 +2,15 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import joblib
 import pandas as pd
-
+import os
 app = Flask(__name__)
 CORS(app)
 
-# Load the trained model
-model = joblib.load("../model/stress_model.pkl")
-encoders = joblib.load("../model/label_encoders.pkl")
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+model = joblib.load(os.path.join(BASE_DIR, "model", "stress_model.pkl"))
+label_encoders = joblib.load(os.path.join(BASE_DIR, "model", "label_encoders.pkl"))
 
 @app.route("/predict", methods=["POST"])
 def predict():
