@@ -21,8 +21,8 @@ def predict():
 
     age = int(data["Age"])
     gender = label_encoders["Gender"].transform([data["Gender"]])[0]
-    occupation = labels_encoders["Occupation"].transform([data["Occupation"]])[0]
-    marital_status = labels_encoders["Marital_Status"].transform([data["Marital_Status"]])[0]
+    occupation = label_encoders["Occupation"].transform([data["Occupation"]])[0]
+    marital_status = label_encoders["Marital_Status"].transform([data["Marital_Status"]])[0]
     sleep_duration = float(data["Sleep_Duration"])
     sleep_quality = float(data["Sleep_Quality"])
     wake_up_time = label_encoders["Wake_Up_Time"].transform([data["Wake_Up_Time"]])[0]
