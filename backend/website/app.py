@@ -5,7 +5,9 @@ import pandas as pd
 import os
 app = Flask(__name__)
 CORS(app)
-
+@app.route("/")
+def home():
+    return "Stress Monitoring API is running successfully!"
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
